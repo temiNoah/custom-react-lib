@@ -1,16 +1,22 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import Header from "./Header";
-import Content from "./Content";
+import React, { useState } from "react";
+import { Typography } from "@material-ui/core";
+
+import { Form } from "./Components/Form/Form";
 
 const App = () => {
+  const [user, setUser] = useState({});
+
+  const updateUser = (data) => {
+    setUser(data);
+  };
+
   return (
     <div className="App">
-    <Typography variant="h1" color="primary">
-      hello world
-    </Typography>    
-   
-  </div>
+      <Typography variant="h1" color="primary">
+        {`Hello, ${user.firstName ? user.firstName : "Stranger"}`}
+      </Typography>
+      <Form updateUser={updateUser} />
+    </div>
   );
 };
 
