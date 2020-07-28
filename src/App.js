@@ -6,10 +6,7 @@ import Content from "./Content";
 const App = () => {
   return (
     <div className="App">
-    <Typography variant="h1" color="primary">
-      hello world
-    </Typography>    
-   
+          <FormUserDetails />
   </div>
   );
 };
