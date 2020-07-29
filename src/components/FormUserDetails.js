@@ -37,53 +37,53 @@ import Button from '@material-ui/core/Button';
       
 
 
-  render() {  return (<h1>hevv</h1>);
-    //const { values, handleChange } = this.props;
-    // return (
-    //   <MuiThemeProvider>
-    //     <>
-    //       {/* <Dialog
-    //         open
-    //         fullWidth
-    //         maxWidth='sm'
-    //       > */}
-    //         <AppBar title="Enter User Details" />
-    //         <TextField
-    //           placeholder="Enter Your First Name"
-    //           label="First Name"
-    //           onChange={handleChange('firstName')}
-    //           defaultValue={values.firstName}
-    //           margin="normal"
-    //           fullWidth
-    //         />
-    //         <br />
-    //         <TextField
-    //           placeholder="Enter Your Last Name"
-    //           label="Last Name"
-    //           onChange={handleChange('lastName')}
-    //           defaultValue={values.lastName}
-    //           margin="normal"
-    //           fullWidth
-    //         />
-    //         <br />
-    //         <TextField
-    //           placeholder="Enter Your Email"
-    //           label="Email"
-    //           onChange={handleChange('email')}
-    //           defaultValue={values.email}
-    //           margin="normal"
-    //           fullWidth
-    //         />
-    //         <br />
-    //         <Button
-    //           color="primary"
-    //           variant="contained"
-    //           onClick={this.continue}
-    //         >Continue</Button>
-    //       {/* </Dialog> */}
-    //     </>
-    //   </MuiThemeProvider>
-    // );
+  render() {    // return (<h1>hevv</h1>);
+   // const { values, handleChange } = this.props;
+    return (
+      <MuiThemeProvider>
+        <>
+          {/* <Dialog
+            open
+            fullWidth
+            maxWidth='sm'
+          > */}
+            <AppBar title="Enter User Details" />
+            <TextField
+              placeholder="Enter Your First Name"
+              label="First Name"
+              onChange={this.handleChange('firstName')}
+              defaultValue={this.firstName}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <TextField
+              placeholder="Enter Your Last Name"
+              label="Last Name"
+              onChange={this.handleChange('lastName')}
+              defaultValue={this.lastName}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <TextField
+              placeholder="Enter Your Email"
+              label="Email"
+              onChange={this.handleChange('email')}
+              defaultValue={this.email}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={this.continue}
+            >Continue</Button>
+          {/* </Dialog> */}
+        </>
+      </MuiThemeProvider>
+    );
   }
 }
 
