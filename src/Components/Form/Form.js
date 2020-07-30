@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./Form.css";
 
-export const Form = ({ updateUser }) => {
+export const Form = ( {updateUser} ) => {
   const [userInput, setUserInput] = useState({});
 
   const handleChange = (e) => {
@@ -10,7 +10,7 @@ export const Form = ({ updateUser }) => {
     let name = e.target.name;
     let value = e.target.value;
     formValues[name] = value;
-    setUserInput(formValues);
+    setUserInput(formValues);  //{name:value}
   };
 
   const handleSubmit = (e) => {
