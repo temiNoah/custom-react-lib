@@ -14,7 +14,7 @@ const App = () => {
     setUser(data);
 
     if(isFormDataValid(data))
-        alert("Hurray!! succeffuly completed your form");
+        alert("Hurray!! successffuly completed your form");
      // else
         // alert ("please check the form and provide valid details");
 
