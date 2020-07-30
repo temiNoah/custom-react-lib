@@ -1,16 +1,26 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-//import Header from "./Header";
-//import Content from "./Content";
-import FormUserDetails from "./components/FormUserDetails";
-import MenuAppBar from './components/MenuApp';
+import React, { useState } from "react";
+import { Typography } from "@material-ui/core";
+
+import { Form } from "./Components/Form/Form";
+
+import MenuAppBar from "./components/MenuApp/MenuAppBar";
 
 const App = () => {
-  return (
-     <div className="App" >
-           <MenuAppBar/>
-           <FormUserDetails /> 
-   </div>
+  const [user, setUser] = useState({});
+
+  const updateUser = (data) => {
+    setUser(data);
+  };
+
+  return (    
+           
+    <div className="App">
+       <MenuAppBar/>
+      <Typography variant="h1" color="primary">
+        {`Hello, ${user.firstName ? user.firstName : "Stranger"}`}
+      </Typography>
+      <Form updateUser={updateUser} />
+    </div>
   );
 };
 
